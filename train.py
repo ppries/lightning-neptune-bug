@@ -57,7 +57,7 @@ def main():
         save_top_k=-1,
     )
     trainer = L.Trainer(
-        max_epochs=-1,
+        max_epochs=20,
         logger=neptune_logger,
         callbacks=[checkpoint_callback],
         accelerator="gpu",
