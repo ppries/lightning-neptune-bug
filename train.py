@@ -48,7 +48,7 @@ class DummyModel(L.LightningModule):
 def main():
     data_module = RandomDataModule()
     lightning_model = DummyModel()
-    neptune_logger = L.pytorch.loggers.NeptuneLogger(project="p.pries/test", prefix="")
+    neptune_logger = L.pytorch.loggers.NeptuneLogger(project="INSERT_NEPTUNE_PROJECT", prefix="")
     checkpoint_callback = L.pytorch.callbacks.ModelCheckpoint(
         filename="model_{epoch:04d}",
         monitor="training/loss",
